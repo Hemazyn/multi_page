@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { steps } from '../constants';
 import { backgroundImageMd, backgroundImageSm } from "../assets/index";
@@ -8,23 +8,26 @@ import { backgroundImageMd, backgroundImageSm } from "../assets/index";
 const Steps = ({ activeStep }) => {
      const navigate = useNavigate();
      const [isEmailValid, setEmailValid] = useState(true);
-
+     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+     useEffect(() => {
+          const handleResize = () => {
+               setWindowWidth(window.innerWidth);
+          };
+          window.addEventListener('resize', handleResize);
+          return () => {
+               window.removeEventListener('resize', handleResize);
+          };
+     }, []);
      const validateInputs = () => {
           const name = document.getElementById('name').value.trim();
           return name !== '' && isEmailValid;
      };
-
-     const getBackgroundImage = () => {
-          if (window.innerWidth >= 1024) {
-               return `url(${backgroundImageMd})`;
-          } else {
-               return `url(${backgroundImageSm})`;
-          }
-     };
+     const backgroundImageUrl = windowWidth >= 1024 ? backgroundImageMd : backgroundImageSm;
 
      return (
-          <div className="relative flex h-[172px] lg:h-[500px] w-full lg:w-[300px] justify-center bg-cover rounded-none lg:rounded-xl" style={{ backgroundImage: getBackgroundImage() }}>
-               <div className="flex flex-row lg:flex-col h-fit lg:h-full gap-8 mt-10">
+          <div className=" relative flex justify-center bg-cover rounded-none lg:rounded-xl h-full">
+               <img src={backgroundImageUrl} alt="background" className="relative h-full w-full lg:w-fit max-w-none" />
+               <div className="absolute flex flex-row lg:flex-col h-full w-full justify-center lg:justify-start gap-8 pl-0 lg:pl-5 pt-10">
                     {steps.map(({ id, number, step, info }, index) => (
                          <div key={id} className={`flex flex-row h-fit gap-4 ${index === activeStep ? 'active' : ''}`}>
                               <h1 className={`grid place-items-center w-10 h-10 rounded-full text-White border-2 border-Pastel-blue ${index === activeStep ? 'bg-Light-blue text-[#000]' : ''}`}>{number}</h1>
@@ -35,6 +38,7 @@ const Steps = ({ activeStep }) => {
                          </div>
                     ))}
                </div>
+
           </div>
      );
 };

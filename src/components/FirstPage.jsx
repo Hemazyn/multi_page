@@ -37,8 +37,8 @@ const FirstPage = ({ onNextStep, activeStep }) => {
           <>
                <form onSubmit={handleSubmit} noValidate className="h-full flex flex-col justify-between">
                     <div className="bg-Magnolia lg:bg-White w-full h-[400px] flex justify-center">
-                         <div className="absolute top-[110px] lg:relative lg:top-0 flex flex-col bg-White w-[90%] lg:w-[500px] mx-auto rounded-xl p-8">
-                              <h1 className="mt10 text-3xl text-Marine-blue font-Ubuntu font-bold">Personal Info</h1>
+                         <div className="absolute top-[110px] lg:relative lg:top-0 flex flex-col bg-White w-[90%] lg:w-[500px] mx-auto rounded-xl p-8 lg:pl-0">
+                              <h1 className="mt-0 lg:mt-10 text-3xl text-Marine-blue font-Ubuntu font-bold">Personal Info</h1>
                               <p className="text-sm text-Cool-gray mt-3"> Please provide your name, email address, and phone number.</p>
                               <div className="flex flex-col mt-7 mt10 gap-4">
                                    <div className="flex flex-col gap-1">
