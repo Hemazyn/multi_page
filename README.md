@@ -18,8 +18,8 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 ### Screenshot
 ![](/src/assets//preview.png)
 ### Links
-- Solution URL: [Github repository](https://github.com/Hemazyn/News_homepage)
-- Live Site URL: [Netlify Link](https://devemma-news-homepage.netlify.app/)
+- Solution URL: [Github repository](https://github.com/Hemazyn/multi_page)
+- Live Site URL: [Netlify Link](https://dev-multi.netlify.app/)
 ## My process
 ### Built with
 - Semantic HTML5 markup
