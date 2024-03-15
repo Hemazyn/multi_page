@@ -3,7 +3,7 @@ import { thank } from "../assets";
 const Confirm = () => {
      return (
           <>
-               <div className="h-full flex flex-col justify-between">
+               <div className="h-full flex flex-col justify-center">
                     <div className="bg-Magnolia lg:bg-White w-full h-[400px] flex justify-center lg:items-center">
                          <div className="absolute top-[110px] lg:relative lg:top-0 flex flex-col bg-White items-center lg:items-center w-[90%] lg:w-[500px] mx-auto rounded-xl p-8">
                               <img src={thank} alt="thanks icons" loading="lazy" className="w-20 h-20" />

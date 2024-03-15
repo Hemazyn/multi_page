@@ -44,8 +44,8 @@ const ThirdPage = ({ onNextStep, activeStep, setActiveStep, selectedPlan }) => {
                                         const isChecked = selectedItemIds.includes(id);
                                         return (
                                              <div key={id} className={`flex flex-row justify-between items-center border ${isChecked ? 'bg-Magnolia border-Purplish-blue' : 'border-Light-gray'} hover:border-Purplish-blue cursor-pointer rounded-lg px-3 py-4 gap20`} onClick={() => handleItemClick(id)}>
-                                                  <div className="flex flex-row gap-3">
-                                                       <input type="checkbox" name="checkbox" id={`checkbox-${id}`} className="w-5 rounded-full]" checked={isChecked} onChange={() => handleItemClick(id)} />
+                                                  <div className="flex flex-row gap-3 items-center">
+                                                       <input type="checkbox" name="checkbox" id={`checkbox-${id}`} className="w5 rounded-full cursor-pointer border border-[yellow]" checked={isChecked} onChange={() => handleItemClick(id)} onClick={() => handleItemClick(id)} />
                                                        <div className="flex flex-col">
                                                             <h2 className="text-Marine-blue font-semibold">{planTypeName}</h2>
                                                             <p className="text-Cool-gray font-light text-xs">{planTypeText}</p>

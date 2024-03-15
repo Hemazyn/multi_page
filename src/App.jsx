@@ -37,8 +37,8 @@ function App() {
 
   return (
     <>
-      <div className="h-full lg:h-screen w-full flex justify-center items-center bg-none lg:bg-Magnolia">
-        <div className="w-full h[570px] lg:w-[900px] flex flex-col lg:flex-row p-0 lg:p-4 rounded-none lg:rounded-[20px] bg-White">
+      <div className="h-full lg:h-screen w-full flex justify-center items-center bg-none lg:bg-Magnolia scroll-smooth">
+        <div className="w-full h-full lg:h-[570px] lg:w-[900px] flex flex-col lg:flex-row p-0 lg:p-4 rounded-none lg:rounded-[20px] bg-White">
           <Steps activeStep={activeStep} />
           <div className="flex flex-col h-full w-full p-0">
             {activeStep === 0 && <FirstPage onNextStep={handleNextStep} activeStep={activeStep} />}

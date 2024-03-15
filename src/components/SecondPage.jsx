@@ -36,7 +36,7 @@ const SecondPage = ({ onNextStep, activeStep, setActiveStep, selectedPlan, setSe
 
      return (
           <>
-               <form noValidate className="h-full flex flex-col justify-between">
+               <form noValidate className="h-full flex flex-col justify-between scroll-smooth">
                     <div className="bg-Magnolia lg:bg-White w-full h-[550px] flex justify-center">
                          <div className="absolute top-[110px] lg:relative lg:top-0 flex flex-col bg-White w-[90%] lg:w-[500px] mx-auto rounded-xl p-8">
                               <h1 className="mt10 text-3xl text-Marine-blue font-Ubuntu font-bold">Select your plan</h1>

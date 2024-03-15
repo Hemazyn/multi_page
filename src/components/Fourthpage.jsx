@@ -37,7 +37,7 @@ const FourthPage = ({ setActiveStep, onConfirmClick, secondPageData, thirdPageDa
                                         {secondPageData.planDetails.map((item, index) => (
                                              <div key={index} className="flex flex-row justify-between items-center">
                                                   <div className="flex flex-col">
-                                                       <h4 className="text-Marine-blue font-medium font-Ubuntu">{item.plan} <span className="font-Ubuntu">({secondPageData.selectedPlan})</span> </h4>
+                                                       <h4 className="text-Marine-blue font-medium font-Ubuntu">{item.plan} <span className="font-Ubuntu capitalize">({secondPageData.selectedPlan})</span> </h4>
                                                        <p className="text-Cool-gray underline decoration-2 text-sm">Change</p>
                                                   </div>
                                                   <p className="text-Marine-blue font-medium">{secondPageData.selectedPlan === 'monthly' ? item.perMonth : item.perYear}</p>

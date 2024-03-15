@@ -25,8 +25,8 @@ const Steps = ({ activeStep }) => {
      const backgroundImageUrl = windowWidth >= 1024 ? backgroundImageMd : backgroundImageSm;
 
      return (
-          <div className=" relative flex justify-center bg-cover rounded-none lg:rounded-xl h-full">
-               <img src={backgroundImageUrl} alt="background" className="relative h-full w-full lg:w-fit max-w-none" />
+          <div className=" relative flex justify-center bg-cover rounded-none lg:rounded-xl h-fit lg:h-full">
+               <img src={backgroundImageUrl} alt="background" className="relative h-full w-full lg:w-fit max-w-none bg-center bg-contain" />
                <div className="absolute flex flex-row lg:flex-col h-full w-full justify-center lg:justify-start gap-8 pl-0 lg:pl-5 pt-10">
                     {steps.map(({ id, number, step, info }, index) => (
                          <div key={id} className={`flex flex-row h-fit gap-4 ${index === activeStep ? 'active' : ''}`}>
